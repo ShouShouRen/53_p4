@@ -154,7 +154,7 @@
                     </div>
                     <div class="d-flex align-items-center justify-content-between my-3">
                       <label for="">商品描述:</label>
-                      <input type="text" class="w-75 form-control" name="product_des" require>
+                      <textarea name="product_des" class="form-control w-75"></textarea>
                     </div>
                     <div class="d-flex align-items-center justify-content-between my-3">
                       <label for="">發布日期:</label>
@@ -193,5 +193,5 @@
 <script src="./js/jquery.min.js"></script>
 <script src="./js/bootstrap.js"></script>
 <script src="./js/script.js"></script>
-
+<script src="./js/template.js"></script>
 </html>
