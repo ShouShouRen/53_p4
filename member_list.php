@@ -9,9 +9,8 @@
   $stmt = $pdo->prepare($sql);
   $stmt->execute();
   $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-  
   $sql_log = "SELECT * FROM login_log";
-  $stmt_log = $pdo->prepare($sql);
+  $stmt_log = $pdo->prepare($sql_log);
   $stmt_log->execute();
   $result_log = $stmt_log->fetchAll(PDO::FETCH_ASSOC);
 ?>
@@ -144,7 +143,7 @@
             </form>
           </div>
         </div>
-        <table class="teble table-hover">
+        <table class="table table-hover">
           <tr>
             <th>使用者編號</th>
             <th>使用者帳號</th>
