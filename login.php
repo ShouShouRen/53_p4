@@ -32,7 +32,7 @@
           </div>
           <div class="my-1">
             <label for="">密碼:</label>
-            <input type="text" class="form-control my-3" name="pw" require>
+            <input type="password" class="form-control my-3" name="pw" require>
             <?php if(isset($_SESSION["error"]) && $_SESSION["error"] === "password") {?>
             <div class="text-danger font-weight-bolder">帳好錯誤</div>
             <?php } ;?>

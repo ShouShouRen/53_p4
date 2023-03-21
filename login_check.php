@@ -3,7 +3,7 @@
   extract($_POST);
   require_once("pdo.php");
   $max = 3;
-  if(isset($_SESSION["attempts"])){
+  if(!isset($_SESSION["attempts"])){
     $_SESSION["attempts"] = 0;
   }
   if($_SESSION["attempts"] === $max){
