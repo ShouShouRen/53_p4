@@ -208,7 +208,7 @@
                   <input type="text" class="form-control w-75" id="links" name="links">
                 </div>
                 <div class="text-right my-3">
-                  <input type="submit" class="btn btn-primary" id="save-product" value="儲存">
+                  <input type="submit" class="btn btn-primary saveproduct" value="儲存">
                 </div>
                 <input type="hidden" name="id" id="id">
               </form>
