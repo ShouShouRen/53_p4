@@ -128,17 +128,15 @@
               費用:<?= $row["price"]; ?> 元</div>
           </div>
           <div class="col-6">
-            <img src="./images/<?= $row["images"]
-                                                        ?>" class="w-100" style="height: 225px" alt="">
-            <div class="bg-2 w-100 h-20 mt-1 py-3 text-center text-light">相關連結:<a
-                href="<?= $row["links"]; ?>"><?= $row["links"]; ?></a></div>
+            <img src="./images/<?= $row["images"]?>" class="w-100" style="height: 225px" alt="">
+            <div class="bg-2 w-100 h-20 mt-1 py-3 text-center text-light">相關連結:<a href="<?= $row["links"]; ?>"><?= $row["links"]; ?></a></div>
           </div>
           <div class="col-12 mt-2">
             <?php
-                if ($_SESSION["AUTH"]["role"] == 0) {
-                    echo "<button class='btn btn-secondary btn-sm edit-product' data-toggle='modal' data-id='" . $row['id'] . "' data-target='#edit-product'>編輯</button>";
-                }
-              ?>
+              if ($_SESSION["AUTH"]["role"] == 0) {
+                echo "<button class='btn btn-secondary btn-sm edit-product' data-toggle='modal' data-id='" . $row['id'] . "' data-target='#edit-product'>編輯</button>";
+              }
+            ?>
           </div>
         </div>
       </div>
@@ -156,16 +154,15 @@
               商品名稱:<?= $row["product_name"]; ?></div>
           </div>
           <div class="col-6">
-            <div class="bg-1 w-100 h-20 mb-1 py-3 text-center text-light">相關連結:<a
-                href="<?= $row["links"]; ?>"><?= $row["links"]; ?></a></div>
+            <div class="bg-1 w-100 h-20 mb-1 py-3 text-center text-light">相關連結:<a href="<?= $row["links"]; ?>"><?= $row["links"]; ?></a></div>
             <img src="./images/<?= $row["images"]; ?>" class="w-100" style="height: 225px" alt="">
           </div>
           <div class="col-12 mt-2">
             <?php
-                if ($_SESSION["AUTH"]["role"] == 0) {
-                    echo "<button class='btn btn-secondary btn-sm edit-product' data-toggle='modal' data-id='" . $row['id'] . "' data-target='#edit-product'>編輯</button>";
-                }
-              ?>
+              if ($_SESSION["AUTH"]["role"] == 0) {
+                echo "<button class='btn btn-secondary btn-sm edit-product' data-toggle='modal' data-id='" . $row['id'] . "' data-target='#edit-product'>編輯</button>";
+              }
+            ?>
           </div>
         </div>
       </div>
