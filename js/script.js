@@ -125,6 +125,7 @@ $(function () {
       },
     });
   });
+
   $(".savemember").click(function () {
     let user = $("#user").val();
     let user_name = $("#user_name").val();
@@ -142,6 +143,48 @@ $(function () {
       type: "POST",
       data: JSON.stringify(data),
       contentType: "application/json",
+      success: function (response) {
+        window.location.reload();
+      },
+    });
+  });
+
+  $(".getproduct").click(function () {
+    let product_id = $(this).data("id");
+    $.ajax({
+      url: "get_product.php",
+      type: "GET",
+      data: {
+        id: product_id,
+      },
+      dataType: "json",
+      success: function (response) {
+        $("#id").val(response[0].id);
+        $("#product_name").val(response[0].product_name);
+        $("#product_des").val(response[0].product_des);
+        $("#price").val(response[0].price);
+        $("#links").val(response[0].links);
+        let imagePath = "./images/" + response[0].images;
+        $("#current-image").attr("src", imagePath);
+      },
+    });
+  });
+
+  $(".saveproduct").click(function (e) {
+    e.preventDefault();
+    let formData = new FormData();
+    formData.append("id", $("#id").val());
+    formData.append("product_name", $("#product_name").val());
+    formData.append("product_des", $("#product_des").val());
+    formData.append("price", $("#price").val());
+    formData.append("links", $("#links").val());
+    formData.append("images", $("#images")[0].files[0]);
+    $.ajax({
+      url: "update_product.php",
+      type: "POST",
+      data: formData,
+      processData: false,
+      contentType: false,
       success: function (response) {
         window.location.reload();
       },
