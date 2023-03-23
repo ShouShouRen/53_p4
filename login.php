@@ -34,7 +34,7 @@
             <label for="">密碼:</label>
             <input type="password" class="form-control my-3" name="pw" require>
             <?php if(isset($_SESSION["error"]) && $_SESSION["error"] === "password") {?>
-            <div class="text-danger font-weight-bolder">帳好錯誤</div>
+            <div class="text-danger font-weight-bolder">密碼錯誤</div>
             <?php } ;?>
           </div>
           <div class="my-1">
